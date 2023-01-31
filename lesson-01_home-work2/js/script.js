@@ -1,2 +1,2 @@
-let name = prompt("What is your name?");
-alert("Hello, " + name + "! " + "How are you?");
+let nameUser = prompt("What is your name?");
+alert("Hello, " + nameUser + "! " + "How are you?");
