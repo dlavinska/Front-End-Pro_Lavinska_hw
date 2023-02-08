@@ -1,4 +1,4 @@
-const operator = prompt("What do you want to do with the numbers? Write one of this operators (add, sub, mult, div)");
+const operator = prompt("What do you want to do with the numbers? Write one of this operators (add, sub, mult, div)", " ");
 
 let num1 = prompt("Please, write first number", " ");
 num1 = Number(num1);
