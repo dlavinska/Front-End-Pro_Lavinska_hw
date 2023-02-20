@@ -3,7 +3,7 @@
 const arr = [56, "fruit", true, "rem", NaN, null, false, undefined, 3, 8, 11, "58", "vegetables"];
 
 function defineAverage(array) {
-  const numbers = array.filter(x => !isNaN(x) && x !== true && x !== false && x !== null);
+  const numbers = array.filter(x => typeof x === "number" && !isNaN(x));
 
     if (numbers.length == 0) {
       return 0;
