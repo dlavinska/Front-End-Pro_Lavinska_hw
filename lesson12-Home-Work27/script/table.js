@@ -10,7 +10,6 @@ function drawTable() {
     for (let i = 0; i < 10; i++) {
         let row = document.createElement("tr");
         row.style.border = "1px solid black";
-	     
 	    
         for (let j = 0; j < 10; j++) {
             let col = document.createElement("td");
@@ -25,7 +24,7 @@ function drawTable() {
 
     }
     
-        divTable.append(tbl); 
+    divTable.append(tbl); 
 }
 
 window.onload=drawTable;
