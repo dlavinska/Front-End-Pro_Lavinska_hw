@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    <body>
+        <style>
+            img {
+                width: 600px;
+                height: 400px;
+            } 
+
+            .prev, .next {
+                border-radius: 20px;
+                padding: 20px;
+                border: none;
+                background-color:rgb(86, 228, 145);
+                cursor: pointer;
+                margin: 179px 39px;
+            }
+
+            .prev:hover, .next:hover {
+                background-color: blue;
+                color: white;
+            }
+
+            .slider {
+                width: 800px;
+                display: flex;
+            }
+          
+        </style>
+        
+        <div class="slider">
+            <button class="prev" id="prev">Prev</button>
+            <img src="images/1.jpg" alt="slide images" class="image" id="image">
+            <button class="next" id="next">Next</button>
+        </div>               
+
+        <script src="script/slider.js"></script>
+    </body>
+</html>
