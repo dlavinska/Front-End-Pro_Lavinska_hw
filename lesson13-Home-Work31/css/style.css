@@ -1,0 +1,122 @@
+.shop {
+    display: flex;
+}
+
+.categories-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories {
+    list-style: none;
+}
+
+.category {
+    padding: 10px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+    transition: 0.3s;
+    background-color: rgb(186, 225, 240);
+}
+
+.category:hover {
+    background-color: #c6c9ef;
+}
+
+.products {
+    padding: 70px 0;
+}
+
+.list-item {
+    list-style: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: max-content;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: 0.5s all;
+    background-color: #e4a70b;
+}
+
+.list-item:hover {
+    background-color: #c6c9ef;
+}
+
+.product-info-box {
+    display: none;
+    height: max-content;
+    margin: 0 50px;
+}
+
+.product-price,
+.product-description {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.img-product {
+    max-width: 239px;
+    max-height: 200px;
+}
+
+.buy-button {
+    padding: 5px;
+    max-width: 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    background-color: rgb(108, 223, 122);
+    border-radius: 10px;
+}
+
+.message {
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 40px;
+    z-index: 3;
+    border-radius: 7px;
+}
+
+.pop-up-bg {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: black;
+    opacity: 0.4;
+    display: none;
+}
+
+.btn-pop-up {
+    font-size: 18px;
+    background: rgb(115, 115, 115);
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
