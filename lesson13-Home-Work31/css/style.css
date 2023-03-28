@@ -51,7 +51,6 @@
 }
 
 .product-info-box {
-    display: none;
     height: max-content;
     margin: 0 50px;
 }
@@ -84,7 +83,6 @@
 }
 
 .message {
-    display: none;
     width: 300px;
     height: 300px;
     position: fixed;
@@ -102,7 +100,6 @@
     inset: 0 0 0 0;
     background-color: black;
     opacity: 0.4;
-    display: none;
 }
 
 .btn-pop-up {
@@ -119,4 +116,12 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }

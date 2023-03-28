@@ -102,27 +102,43 @@ const message = document.querySelector(".message");
 const popUpBg = document.querySelector(".pop-up-bg");
 const popUpBtn = document.querySelector(".btn-pop-up");
 
+function showElement(element) {
+    element.classList.add("show");
+    element.classList.remove("hide");
+}
+
+function hideElement(element) {
+    element.classList.remove("show");
+    element.classList.add("hide");
+}
+
 categories.addEventListener("click", (e) => {
     const target = e.target;
+
     if (target === e.currentTarget) {
         return target;
     }
-    productInfo.style.display = "none";
-    listProducts.style.display = "block";
+
+    hideElement(productInfo);
+    showElement(listProducts);
 
     for (prop in products) {
         const productArray = products[prop];
         const productArrayName = prop;
+
         if (productArrayName === target.dataset.filter) {
             if (listProducts.children.length > 0) {
                 while (listProducts.firstChild) {
                     listProducts.removeChild(listProducts.firstChild);
                 }
             }
+
             productArray.filter((el) => {
-                const li = document.createElement("li")
+                const li = document.createElement("li");
+
                 li.className = "list-item";
                 li.innerHTML = el.name;
+
                 return listProducts.append(li);
             });
         }
@@ -131,14 +147,17 @@ categories.addEventListener("click", (e) => {
 
 listProducts.addEventListener("click", (e) => {
     const target = e.target;
+
     if (target === e.currentTarget) {
         return target;
     }
-    productInfo.style.display = "block";
+
+    showElement(productInfo);
 
     for (prop in products) {
         const productArray = products[prop];
         productArray.filter((el) => {
+
             if (target.innerText === el.name) {
                 productImg.src = el.image;
                 productDescr.innerText = `Description: ${el.description}`;
@@ -148,21 +167,24 @@ listProducts.addEventListener("click", (e) => {
     }
 });
 
-function messageDisplay() {
-    message.style.display = "none";
-    popUpBg.style.display = "none";
+function showMessage() {
+    showElement(message);
+    showElement(popUpBg);
+}
+
+function hideMessage() {
+    hideElement(message);
+    hideElement(popUpBg);
 }
 
 buyButton.addEventListener("click", () => {
-    message.style.display = "block";
-    popUpBg.style.display = "block";
-    productInfo.style.display = "none";
-    listProducts.style.display = "none";
-    setTimeout(function () {
-        messageDisplay();
+    showMessage();
+    hideElement(productInfo);
+    hideElement(listProducts);
+
+    setTimeout(() => {
+        hideMessage();
     }, 3000);
 });
 
-popUpBtn.addEventListener("click", () => {
-    messageDisplay();
-});
+popUpBtn.addEventListener("click", hideMessage);
