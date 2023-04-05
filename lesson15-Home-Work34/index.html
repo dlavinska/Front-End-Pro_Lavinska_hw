@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="shop">
+            <div class="categories-box">
+                <h2>Categories of products:</h2>
+                <ul class="categories">
+                    <li class="category" data-filter = "phones">Phones</li>
+                    <li class="category" data-filter = "tablets">Tablets</li>
+                    <li class="category" data-filter = "laptops">Laptops</li>
+                </ul>
+            </div>
+            <div class="products">
+                <ul class="list-products hide"></ul>
+            </div>
+            <div class="product-info-box hide">
+                <img class="img-product" src ="">
+                <p class="product-name"></p>
+                <p class="product-description"></p>
+                <p class="product-price"></p>
+                <button class="buy-button">Buy</button>
+            </div>
+
+            <div class="form-container hide">
+                <button class="form-close-btn">x</button>
+                <h2 class="form-title">Placing an order</h2>
+                <form action="#" class="form" id="order-form">
+                    
+                    <label for="surname">
+                        <span>Surname (required field)</span>
+                        <input type="text" id="surname" placeholder="Surname" required>
+                    </label>
+                    
+                    <label for="name">
+                        <span>Name (required field)</span>
+                        <input type="text" id="name" placeholder="Name" required>
+                    </label>
+                    
+                    <label for="patronymic">
+                        <span>Patronymic (required field)</span>
+                        <input type="text" id="patronymic" placeholder="Patronymic" required>
+                    </label>
+                    
+                    <label for="city">
+                        <span>City</span>
+                    </label>
+                    
+                    <select name="city" id="city">
+                        <option>Kyiv</option>
+                        <option>Odesa</option>
+                        <option>Lviv</option>
+                        <option>Vinnitsa</option>
+                    </select>
+                    
+                    <label for="post">
+                        <span>Post Office "Nova Poshta"</span>
+
+                        <select name="post" id="post">
+                            <option value="№10">№10</option>
+                            <option value="№10">№16</option>
+                            <option value="№22">№22</option>
+                            <option value="№1">№1</option>
+                        </select>
+                    </label>
+
+                    <label for="payment">
+                        <span>Payment method</span>
+
+                        <select name="payment" id="payment">
+                            <option>Postpaid</option>
+                            <option>Bank card</option>
+                        </select>
+                    </label>
+
+                    <label for="amount">
+                        <span>Quantity of product</span>
+                        <input type="number" id="amount" placeholder="Amount" min="1" value="1">
+                    </label>
+
+                    <label for="comment">
+                        <span>Comment</span>
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your comment"></textarea>
+                    </label>
+                    
+                    <button id="form-btn-submit" class="btn" type="submit">Buy</button>
+                    <button id="form-btn-reset" class="btn" type="reset">Reset</button>
+                    
+                </form>
+            </div>
+
+            <div class="error hide">
+                <div>Not all required fields completed</div>
+                <button class="error-btn">OK</button>
+            </div>
+
+            <div class="pop-up-bg hide"></div>
+
+            <div class="order-information hide">
+                <div class="product-order-info">
+                    <p class="product-order-info-text"></p>
+                    <img src="" alt="product-image" class="img" width="80px" height="60px">
+                </div>                
+                <button class="order-btn">OK</button>
+            </div>                
+            </div>
+
+        </div>        
+
+        <script src="script/shop.js"></script>
+    </body>
+</html>
