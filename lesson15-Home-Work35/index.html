@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <form id="myForm">
+                <h3 class="text-center">Form registration</h3>
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" id="name" class="form-control form-control-sm">
+                </div>
+
+                <div class="form-group">
+                    <label>Surname:</label>
+                    <input type="text" id="surname" class="form-control form-control-sm">
+                </div>
+                
+                <div class="form-group">
+                    <label>Birthday date:</label>
+                    <input type="text" id="birthday" class="form-control form-control-sm" placeholder="21/03/1989">
+                </div>
+
+                <div class="form-group">
+                    Gender: <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" value="Female" checked>
+                    <label for="female">Female</label>
+                </div>
+
+                <div class="form-group">
+                    <label>City:</label>
+                    <select name="city" id="city">
+                        <option value="Kiev">Kiev</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Odessa">Odessa</option>
+                        <option value="Khmelnytskyi">Khmelnytskyi</option>
+                        <option value="Vinnitsa">Vinnitsa</option>
+                        <option value="Poltava">Poltava</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Adress:</label>
+                    <textarea id="adress" placeholder="Add your adress"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Language:</label>
+                    <input type="checkbox" id="ukrainian" name="language" value="Ukrainian"> Ukrainian
+                    <input type="checkbox" id="english" name="language" value="English"> English
+                    <input type="checkbox" id="french" name="language" value="French"> French
+                    <input type="checkbox" id="spanish" name="language" value="Spanish"> Spanish
+                </div>
+
+                <button type="button" id="display" class="btn btn-sm btn-primary">Save</button>
+            </form>
+
+            <table class="table hide" id="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Birthday date</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Adress</th>
+                    <th>Language</th>
+                </tr>
+            </table>
+
+        </div>
+
+        <script src="script/form.js"></script>
+    </body>
+</html>
