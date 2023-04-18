@@ -82,12 +82,12 @@ function showError(err) {
     if (postsNumber.value < 1 || postsNumber.value > 100) {
         postsBox.innerHTML = "";
 
-        const errorMessage = document.createElement('div')
-        errorMessage.classList.add('mistake')
-        errorMessage.innerHTML = `Ooops... ${err}`
+        const errorMessage = document.createElement("div");
+        errorMessage.classList.add("mistake");
+        errorMessage.innerHTML = `Ooops... ${err}`;
                 
-        const mistakeBtn = document.createElement('button')
-        mistakeBtn.classList.add('btn-error')
+        const mistakeBtn = document.createElement("button");
+        mistakeBtn.classList.add("btn-error");
         mistakeBtn.innerHTML = `OK`;
 
         mistakeBtn.addEventListener("click", () => {
