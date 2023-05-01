@@ -32,7 +32,8 @@ function getData(cityName) {
 const element = document.querySelector(".main");
 
 function showData(data) {
-    element.innerHTML = `
+    element.innerHTML = (
+    `
         <div class="container">
             <section class="location">
                 <div class="city">${data.name}, ${data.sys.country}</div>
@@ -56,6 +57,7 @@ function showData(data) {
             </div>
         </div>
     `
+    );
     cityValue.value = "";
     cityValue.focus();
 }
@@ -78,7 +80,7 @@ function displayWeather() {
 
 function eventSearchInput(event) {
     const ENTER = "Enter";
-    
+
     if (event.key === ENTER) {
         displayWeather();
     }
