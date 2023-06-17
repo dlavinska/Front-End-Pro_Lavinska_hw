@@ -10,7 +10,7 @@ alert(firstName.concat(" ").concat(lastName).concat(" ").concat(course));
 
 const num = +prompt("Enter a five-digit number", " ");
 
-const arr = [..." " + num];
+const arr = [..."" + num];
 const number = arr.join(" ");
 
 alert(number);
