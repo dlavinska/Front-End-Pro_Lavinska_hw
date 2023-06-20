@@ -43,7 +43,7 @@ function showData(data) {
             <div class="current">
                 <div class="temp">${Math.round(data.main.temp)}°C</div>
                 <img class="icon" src="${iconURL}${data.weather[0].icon}.png" alt="weather-pict" style = "width: 100px; height: 100px;">
-                <div class="weather-description">${data.main.pressure} hPa</div>
+                <div class="weather-description">${data.weather[0].description}</div>
                 <div class="pressure">Pressure: ${data.main.pressure} hPa</div>
                 <div class="humidity">
                     <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-humidity-plants-flaticons-lineal-color-flat-icons.png"/>
